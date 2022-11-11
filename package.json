@@ -15,7 +15,7 @@
   "files": [
     "lib"
   ],
-  "repository": "https://github.com/lngovn/sequelize-typescript-model-migration",
+  "repository": "https://github.com/ronygcgarcia/sequelize-typescript-model-repository-migration.git",
   "author": "lngovn",
   "license": "MIT",
   "scripts": {
