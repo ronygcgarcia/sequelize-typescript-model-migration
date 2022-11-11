@@ -24,7 +24,7 @@ And also add some enhancement, such as:
 ## Installation
 
 ```
-npm i -D sequelize-typescript-model-migration
+npm i -D sequelize-typescript-model--repository-migration
 ```
 
 ## Usage Example

@@ -15,13 +15,15 @@
   "files": [
     "lib"
   ],
-  "repository": "https://github.com/ronygcgarcia/sequelize-typescript-model-repository-migration.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronygcgarcia/sequelize-typescript-model-repository-migration.git"
+  },
   "author": "lngovn",
   "license": "MIT",
   "scripts": {
     "sq:init": "sequelize-cli init",
-    "build": "tsc",
-    "install": "npm run build"
+    "build": "tsc"
   },
   "dependencies": {
     "clone-deep": "^4.0.1",
@@ -39,5 +41,13 @@
     "sequelize-cli": "^6.2.0",
     "@types/deep-diff": "^1.0.0",
     "@types/prettier": "^2.2.3"
+  },
+  "bugs": {
+    "url": "https://github.com/ronygcgarcia/sequelize-typescript-model-repository-migration/issues"
+  },
+  "homepage": "https://github.com/ronygcgarcia/sequelize-typescript-model-repository-migration#readme",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
