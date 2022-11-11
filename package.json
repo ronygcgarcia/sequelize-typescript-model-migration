@@ -21,7 +21,7 @@
   "scripts": {
     "sq:init": "sequelize-cli init",
     "build": "tsc",
-    "install": "yarn run build"
+    "install": "tsc"
   },
   "dependencies": {
     "clone-deep": "^4.0.1",
