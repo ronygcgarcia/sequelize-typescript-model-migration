@@ -9,7 +9,8 @@ export const getSequelizeMeta = async (
   filename: string = "noname.js"
 ) => {
   sequelize.addModels([SequelizeMeta]);
-  return SequelizeMeta.findAll({
+  const fn = sequelize.repositoryMode ? sequelize.getRepository(SequelizeMeta) : sequelize;
+  return fn.findAll({
     limit: 1,
     where: { name: { [Op.iLike]: `%${filename}%` } },
     order: [["name", "DESC"]],
