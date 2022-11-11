@@ -32,11 +32,10 @@ export const parseTextDateBlob = (
   type: TextDataType | DateDataType | BlobDataType,
 ) => {
   const extra = type.options?.length
-    ? `(${
-        typeof type.options?.length === 'string'
-          ? `'${type.options?.length}'`
-          : type.options?.length
-      })`
+    ? `(${typeof type.options?.length === 'string'
+      ? `'${type.options?.length}'`
+      : type.options?.length
+    })`
     : '';
   return `Sequelize.${type.constructor.name}${extra}`;
 };
@@ -143,7 +142,7 @@ export const extractColumns = (
 ) => {
   const out: { [idx: string]: {} } = {};
   for (const [key, value] of Object.entries(modelAttribute)) {
-    if (fields.includes('type') && key === 'type') {
+    if (fields.includes('type') && key === 'type' || fields.includes('comment') && key === 'comment') {
       out[key] = parseDataType(value);
       continue;
     }
