@@ -20,7 +20,8 @@
   "license": "MIT",
   "scripts": {
     "sq:init": "sequelize-cli init",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "clone-deep": "^4.0.1",
